@@ -1,9 +1,26 @@
 import React, { Component } from 'react'
+import Page from './Page'
+import '../styles/report.less'
 
-class Calendar extends Component {
-  render() {
-    return (<div>report</div>)
-  }
+class Report extends Component {
+	renderPageContent(index) {
+
+	}
+
+	render() {
+		let {params} = this.props
+		let pages = [{
+			index: 0,
+			theme: 'normal',
+			renderPageContent: this.renderPageContent.bind(this)
+		}]
+
+		return (
+			<div className="report">
+				{pages.map(p=><Page page={p} />)}
+			</div>
+		)
+	}
 }
 
-module.exports = Calendar
+module.exports = Report

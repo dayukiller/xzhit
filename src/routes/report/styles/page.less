@@ -1,0 +1,31 @@
+@import "./_variables.less";
+
+.page {
+	height: 100%;
+	text-align: center;
+	white-space: nowrap;
+
+	-webkit-transition: all 300 ease-in-out;
+	transition: all 300 ease-in-out;
+
+	.active {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	&-content {
+		display: inline-block;
+		width: 1200px;
+		height: 675px;
+		vertical-align: middle;
+
+		background: #fff;
+	}
+}
