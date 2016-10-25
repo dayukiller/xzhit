@@ -17,17 +17,6 @@ class Page extends Component {
 			width = height / 0.5625
 		}
 
-		const circle = new mojs.Shape({
-		  shape:  			'circle',
-		  scale:   			{ 0 : 1 },
-		  left:         '25%',
-		  fill:         { 'cyan': 'yellow' },
-		  radius:       25,
-
-		  duration:     2000,
-		  repeat:       999,
-		}).play();
-
 		return (
 			<div className="page">
 				<div className="page-content" style={{height,width}}>

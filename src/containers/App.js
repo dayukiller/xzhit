@@ -2,8 +2,15 @@ import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as sysAct from '../actions/system'
+import click from '../plugins/mojs/click'
+import Main from '../components/Main'
 
 class App extends Component {
+	constructor(props) {
+		super(props)
+		click()
+	}
+
 	componentWillMount() {
 		this.props.dispatch(sysAct.initApp())
 	}
@@ -17,7 +24,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="app">{this.props.children || 'this is the begin'}</div>
+			<div className="app">{this.props.children || <Main />}</div>
 		);
 	}
 }
